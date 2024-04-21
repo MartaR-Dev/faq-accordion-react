@@ -13,7 +13,6 @@
 
 .App {
   background-color: var(--light-pink);
-  min-height: 100vh;
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
@@ -22,6 +21,9 @@
 
 .card-base {
   background-color: var(--white);
+  border-radius: 25px;
+  height: 500px;
+  z-index: 1;
 }
 
 .answer {

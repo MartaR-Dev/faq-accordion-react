@@ -4,10 +4,10 @@ import { FAQCard } from "./FAQCard";
 
 export const App = () => {
   return (
-    <div className="App">
+    <div className="App w-100 h-100 position-relative">
       <img
         src={background}
-        className="img-fluid"
+        className="img-fluid w-100 position-absolute"
         alt="purple background with swirly lines"
       />
       <FAQCard />

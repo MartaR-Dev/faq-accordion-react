@@ -9,6 +9,8 @@
 * {
   margin: 0;
   padding: 0;
+  background: none;
+  border: none;
 }
 
 .App {
@@ -22,7 +24,8 @@
 .card-base {
   background-color: var(--white);
   border-radius: 25px;
-  height: 500px;
+  max-width: 60%;
+  /* height: 500px; */
   z-index: 1;
 }
 

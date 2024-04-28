@@ -1,5 +1,6 @@
 import starIcon from "./images/icon-star.svg";
-import { FAQQuestion } from "./FAQQuestion";
+import { AccordionItemFAQ } from "./AccordionItemFAQ";
+import { questionsAndAnswers } from "./Questions_Answers";
 
 export const FAQCard = () => {
   return (
@@ -11,7 +12,10 @@ export const FAQCard = () => {
             FAQs
           </h1>
         </div>
-        <FAQQuestion />
+
+        {questionsAndAnswers.map(({ question, answer }) => (
+          <AccordionItemFAQ question={question} answer={answer} />
+        ))}
       </div>
     </div>
   );

@@ -14,20 +14,19 @@ export const AccordionItemFAQ = ({
   const [isActive, setIsActive] = useState<boolean>(false);
 
   return (
-    <div>
+    <div className="accordion-item mt-4">
       <div
         className="d-flex justify-content-between"
         onClick={() => setIsActive(!isActive)}
       >
-        <h5 className="question fw-semibold">{question}</h5>
-        {isActive ? (
-          <img src={minusIcon} alt="Question minus icon" />
-        ) : (
-          <img src={plusIcon} alt="Question plus icon" />
-        )}
+        <h5 className="accordion-question fw-semibold">{question}</h5>
+        <img
+          src={isActive ? minusIcon : plusIcon}
+          alt="Plus icon on normal, minus icon on click"
+        />
       </div>
 
-      {isActive && <p className="text-start">{answer}</p>}
+      {isActive && <p className="accordion-answer text-start">{answer}</p>}
     </div>
   );
 };

@@ -14,10 +14,10 @@ export const AccordionItemFAQ = ({
   const [isActive, setIsActive] = useState<boolean>(false);
 
   return (
-    <div className="accordion-item mt-4">
+    <div className="accordion-item">
       <div
-        className="d-flex justify-content-between"
         onClick={() => setIsActive(!isActive)}
+        className="accordion-header d-flex justify-content-between py-3"
       >
         <h5 className="accordion-question fw-semibold">{question}</h5>
         <img

@@ -1,6 +1,6 @@
 import starIcon from "./images/icon-star.svg";
-import { AccordionItemFAQ } from "./AccordionItemFAQ";
-import { questionsAndAnswers } from "./Questions_Answers";
+import { AccordionItemFAQ } from "./accordion-item-faq";
+import { questionsAndAnswers } from "./questions-answers";
 
 export const FAQCard = () => {
   return (
@@ -13,7 +13,7 @@ export const FAQCard = () => {
           </h1>
         </div>
 
-        {questionsAndAnswers.map(({ question, answer }, index) => (
+        {questionsAndAnswers.map(({ question, answer }, index: number) => (
           <div className="mx-3">
             <AccordionItemFAQ question={question} answer={answer} />
             {index !== questionsAndAnswers.length - 1 && (

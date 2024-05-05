@@ -1,6 +1,6 @@
 import background from "./images/background-pattern-desktop.svg";
 import "./App.css";
-import { FAQCard } from "./FAQCard";
+import { FAQCard } from "./faq-card";
 
 export const App = () => {
   return (

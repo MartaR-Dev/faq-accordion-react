@@ -13,20 +13,35 @@ export const AccordionItemFAQ = ({
 }: AccordionItemFAQProps) => {
   const [isActive, setIsActive] = useState<boolean>(false);
 
+  const toggleAccordion = () => setIsActive(!isActive);
+
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === "Enter" || event.key === " ") {
+      toggleAccordion();
+    }
+  };
+
   return (
     <section className="accordion-item">
       <div
-        onClick={() => setIsActive(!isActive)}
         className="accordion-header d-flex justify-content-between py-3"
+        onClick={toggleAccordion}
+        onKeyDown={handleKeyPress}
+        tabIndex={0}
+        role="button"
+        aria-expanded={isActive}
       >
         <h5 className="accordion-question fw-semibold">{question}</h5>
         <img
           src={isActive ? minusIcon : plusIcon}
-          alt="Plus icon on normal, minus icon on click"
+          alt={isActive ? "Minus icon" : "Plus icon"}
         />
       </div>
 
-      <p className={`accordion-answer text-start ${isActive ? "active" : ""}`}>
+      <p
+        className={`accordion-answer text-start ${isActive ? "active" : ""}`}
+        aria-hidden={!isActive}
+      >
         {answer}
       </p>
     </section>

@@ -14,7 +14,7 @@ export const AccordionItemFAQ = ({
   const [isActive, setIsActive] = useState<boolean>(false);
 
   return (
-    <div className="accordion-item">
+    <section className="accordion-item">
       <div
         onClick={() => setIsActive(!isActive)}
         className="accordion-header d-flex justify-content-between py-3"
@@ -23,13 +23,12 @@ export const AccordionItemFAQ = ({
         <img
           src={isActive ? minusIcon : plusIcon}
           alt="Plus icon on normal, minus icon on click"
-          className={`accordion-icon ${isActive ? "active" : ""}`}
         />
       </div>
 
       <p className={`accordion-answer text-start ${isActive ? "active" : ""}`}>
         {answer}
       </p>
-    </div>
+    </section>
   );
 };

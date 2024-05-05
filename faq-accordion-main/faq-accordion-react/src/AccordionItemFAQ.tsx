@@ -23,10 +23,13 @@ export const AccordionItemFAQ = ({
         <img
           src={isActive ? minusIcon : plusIcon}
           alt="Plus icon on normal, minus icon on click"
+          className={`accordion-icon ${isActive ? "active" : ""}`}
         />
       </div>
 
-      {isActive && <p className="accordion-answer text-start">{answer}</p>}
+      <p className={`accordion-answer text-start ${isActive ? "active" : ""}`}>
+        {answer}
+      </p>
     </div>
   );
 };

@@ -7,7 +7,7 @@ export const FAQCard = () => {
     <div className="d-flex justify-content-center align-items-center vh-100">
       <div className="card-base p-5">
         <div className="card-header d-flex flex-row mb-3">
-          <img src={starIcon} alt="Star icon" />
+          <img src={starIcon} alt="Star icon" className="me-3" />
           <h1 id="card-title" className="fw-bold">
             FAQs
           </h1>

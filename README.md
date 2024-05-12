@@ -25,7 +25,7 @@ This exercise has the following challenges, where the users should be able to:
 
 ### Screenshot
 
-![FAQ Accordion progress 12/5](../faq-accordion-main/design/FAQ%20Accordion%2012-5.png)
+![FAQ Accordion progress 12/5](../faq-accordion-react/public/design/FAQ%20Accordion%2012-5.png)
 12/5 Progress screenshot (Laptop view)
 
 ## My Process

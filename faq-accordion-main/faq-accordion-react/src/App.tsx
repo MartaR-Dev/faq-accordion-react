@@ -4,7 +4,7 @@ import { FAQCard } from "./faq-card";
 
 export const App = () => {
   return (
-    <div className="App w-100 h-100 position-relative">
+    <div className="App vw-100 vh-100">
       <img
         src={background}
         className="img-fluid w-100 position-absolute"

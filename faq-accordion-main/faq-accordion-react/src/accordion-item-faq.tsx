@@ -2,15 +2,13 @@ import { useState } from "react";
 import plusIcon from "./images/icon-plus.svg";
 import minusIcon from "./images/icon-minus.svg";
 
-interface AccordionItemFAQProps {
-  question: string;
-  answer: string;
-}
-
 export const AccordionItemFAQ = ({
   question,
   answer,
-}: AccordionItemFAQProps) => {
+}: {
+  question: string;
+  answer: string;
+}) => {
   const [isActive, setIsActive] = useState<boolean>(false);
 
   const toggleAccordion = () => setIsActive(!isActive);
